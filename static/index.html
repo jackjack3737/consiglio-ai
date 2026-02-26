@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consiglio di Amministrazione AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="header">
+      <h1>Consiglio di Amministrazione AI</h1>
+      <p>Una risposta, tre menti: Gemini, ChatGPT e Claude lavorano insieme.</p>
+      <div class="badges">
+        <span class="badge badge-gemini">Gemini 2.5 Pro</span>
+        <span class="badge badge-gpt">ChatGPT 4o</span>
+        <span class="badge badge-claude">Claude Opus 4.6</span>
+      </div>
+    </header>
+
+    <main class="chat-container">
+      <div id="chat" class="chat-messages" role="log" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <p>Scrivi un messaggio per avviare la conversazione. Il Consiglio risponderà con Gemini, e GPT e Claude interverranno quando serve.</p>
+        </div>
+      </div>
+
+      <form class="chat-form" id="chatForm" novalidate>
+        <div class="input-wrap">
+          <textarea
+            id="input"
+            class="chat-input"
+            placeholder="Scrivi qui..."
+            rows="1"
+            maxlength="8000"
+            autocomplete="off"
+          ></textarea>
+          <button type="submit" class="send-btn" id="sendBtn" aria-label="Invia">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

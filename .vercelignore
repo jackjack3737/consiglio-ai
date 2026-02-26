@@ -1,0 +1,10 @@
+# Non includere nel deploy (chiavi e file locali)
+*.json
+!package.json
+!vercel.json
+.env
+.env.*
+__pycache__
+.venv
+venv
+.gradio

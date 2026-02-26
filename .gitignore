@@ -1,0 +1,27 @@
+# Chiavi e segreti (non committare)
+.env
+.env.*
+*.json
+!package.json
+!vercel.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Gradio / locale
+.gradio/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

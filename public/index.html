@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consiglio di Amministrazione AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Schermata login (solo tu accedi con la password) -->
+  <div id="loginScreen" class="screen">
+    <div class="login-box">
+      <h1>Consiglio di Amministrazione AI</h1>
+      <p class="login-sub">Accesso riservato</p>
+      <form id="loginForm" class="login-form">
+        <input type="password" id="loginPassword" class="login-input" placeholder="Password" autocomplete="current-password" required>
+        <button type="submit" class="login-btn">Accedi</button>
+      </form>
+      <p id="loginError" class="login-error hidden"></p>
+    </div>
+  </div>
+
+  <!-- App chat (visibile dopo login) -->
+  <div id="appScreen" class="screen hidden">
+    <div class="layout">
+      <header class="header">
+        <h1>Consiglio di Amministrazione AI</h1>
+        <p>Una risposta, tre menti: Gemini, ChatGPT e Claude lavorano insieme.</p>
+        <div class="badges">
+          <span class="badge badge-gemini">Gemini 2.5 Pro</span>
+          <span class="badge badge-gpt">ChatGPT 4o</span>
+          <span class="badge badge-claude">Claude Opus 4.6</span>
+        </div>
+        <button type="button" class="logout-btn" id="logoutBtn" aria-label="Esci">Esci</button>
+      </header>
+
+      <main class="chat-container">
+        <div id="chat" class="chat-messages" role="log" aria-live="polite">
+          <div class="welcome" id="welcome">
+            <p>Scrivi un messaggio per avviare la conversazione. Il Consiglio risponderà con Gemini, e GPT e Claude si metteranno in discussione.</p>
+          </div>
+        </div>
+
+        <form class="chat-form" id="chatForm" novalidate>
+          <div class="input-wrap">
+            <textarea id="input" class="chat-input" placeholder="Scrivi qui..." rows="1" maxlength="8000" autocomplete="off"></textarea>
+            <button type="submit" class="send-btn" id="sendBtn" aria-label="Invia">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
